@@ -1,0 +1,178 @@
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #070b14;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.game-container {
+  width: 100%;
+  max-width: 1000px;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+h1 {
+  font-size: 28px;
+  letter-spacing: 3px;
+}
+
+h1 span {
+  color: #4df5ff;
+}
+
+.stats {
+  display: flex;
+  gap: 10px;
+}
+
+.stats div {
+  background: #111c2d;
+  border: 1px solid #263b53;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 11px;
+  color: #9db3c8;
+}
+
+.stats strong {
+  display: block;
+  margin-top: 5px;
+  color: #4df5ff;
+  font-size: 18px;
+}
+
+.arena {
+  position: relative;
+  overflow: hidden;
+  border: 2px solid #23435b;
+  border-radius: 12px;
+  background: #080f1b;
+  box-shadow: 0 0 30px #4df5ff18;
+}
+
+canvas {
+  display: block;
+  width: 100%;
+  height: auto;
+  touch-action: none;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 20px;
+  background: #070b14eF;
+}
+
+.overlay h2 {
+  color: #4df5ff;
+  font-size: clamp(24px, 4vw, 38px);
+}
+
+.overlay p {
+  color: #a8bbcd;
+  max-width: 400px;
+  line-height: 1.6;
+}
+
+button {
+  padding: 13px 20px;
+  background: #4df5ff;
+  color: #07101b;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #4df5ff77;
+  transform: translateY(-2px);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 15px;
+  flex-wrap: wrap;
+}
+
+.controls button {
+  min-width: 48px;
+  padding: 12px;
+  background: #142237;
+  color: white;
+  border: 1px solid #31506b;
+}
+
+.controls .fire {
+  background: #ff4d91;
+  border-color: #ff4d91;
+  color: white;
+}
+
+.help {
+  text-align: center;
+  color: #71869d;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+    align-items: flex-start;
+  }
+
+  header {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  h1 {
+    text-align: center;
+  }
+
+  .stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .stats div {
+    text-align: center;
+    padding: 8px 3px;
+  }
+
+  .controls {
+    gap: 6px;
+  }
+}

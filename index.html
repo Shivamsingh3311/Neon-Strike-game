@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Strike - Shooting Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header>
+      <h1>NEON <span>STRIKE</span></h1>
+      <div class="stats">
+        <div>SCORE <strong id="score">0</strong></div>
+        <div>HEALTH <strong id="health">100</strong></div>
+        <div>BEST <strong id="best">0</strong></div>
+      </div>
+    </header>
+
+    <div class="arena">
+      <canvas id="game" width="900" height="560"></canvas>
+
+      <div class="overlay" id="overlay">
+        <h2 id="title">ENTER THE ARENA</h2>
+        <p id="description">
+          Shoot enemy drones and survive as long as possible!
+        </p>
+        <button id="startButton">START GAME</button>
+      </div>
+    </div>
+
+    <div class="controls">
+      <button data-key="ArrowLeft">◀</button>
+      <button data-key="ArrowUp">▲</button>
+      <button data-key="ArrowDown">▼</button>
+      <button data-key="ArrowRight">▶</button>
+      <button id="fireButton" class="fire">FIRE</button>
+    </div>
+
+    <p class="help">
+      WASD / Arrow Keys: Move · Mouse: Aim and shoot · Hold mouse to fire
+    </p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
